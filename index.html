@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my personal portfolio website">
+    <title>My Portfolio</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="glass-container">
+            <h1 class="glitch" data-text="Hello, I'm a Developer">Hello, I'm a Developer</h1>
+            <p class="subtitle">Building aesthetic digital experiences.</p>
+            <a href="#contact" class="btn-primary">Get In Touch</a>
+        </div>
+        <!-- Decorative background elements -->
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-card">
+                <h3>Passionate Coder</h3>
+                <p>I love creating beautiful and interactive websites that wow the users. Dark mode and smooth animations are my jam!</p>
+            </div>
+            <div class="about-card">
+                <h3>Tech Stack</h3>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-box glass-container">
+            <p>Ready to start a project? Let's connect on GitHub!</p>
+            <a href="https://github.com/machda159-dev" target="_blank" class="btn-primary">Visit My GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Developer Portfolio. Built with dedication.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
