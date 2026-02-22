@@ -23,19 +23,19 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="메인 네비게이션">
         <div class="logo">SalesExpert</div>
         <ul class="nav-links">
-            <li><a href="#hero">홈</a></li>
-            <li><a href="#about">프로필</a></li>
-            <li><a href="#gallery">비즈니스 갤러리</a></li>
-            <li><a href="#contact">협업 문의</a></li>
+            <li><a href="#hero" aria-label="홈 섹션으로 이동">홈</a></li>
+            <li><a href="#about" aria-label="프로필 섹션으로 이동">프로필</a></li>
+            <li><a href="#gallery" aria-label="비즈니스 갤러리 섹션으로 이동">비즈니스 갤러리</a></li>
+            <li><a href="#contact" aria-label="협업 문의 섹션으로 이동">협업 문의</a></li>
         </ul>
-        <div class="hamburger">
+        <button class="hamburger" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="primary-navigation">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -94,9 +94,10 @@
     </footer>
 
     <!-- Lightbox for Gallery -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightboxImg">
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+        <button class="close-lightbox" aria-label="모달 닫기">&times;</button>
+        <img class="lightbox-content" id="lightboxImg" alt="확대된 이미지">
+        <p id="lightboxCaption" class="lightbox-caption"></p>
     </div>
 
     <!-- 스크립트 캐시 무력화 파라미터 추가 -->

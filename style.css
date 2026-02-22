@@ -14,7 +14,8 @@
     --bg-gray: #f8fafc;
     --text-primary: #1e293b;
     --text-secondary: #475569;
-    --accent: #2563eb;       /* 신뢰성 있는 네이비/블루 */
+    --accent: #2563eb;
+    /* 신뢰성 있는 네이비/블루 */
     --accent-hover: #1d4ed8;
     --border-color: #e2e8f0;
     --card-bg: #ffffff;
@@ -30,7 +31,9 @@ body {
 /* =========================================
    Typography
    ========================================= */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 800;
     color: var(--text-primary);
 }
@@ -104,7 +107,15 @@ p {
     color: var(--accent);
 }
 
-.hamburger { display: none; cursor: pointer; }
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    /* 터치 영역 확대 */
+}
+
 .bar {
     display: block;
     width: 25px;
@@ -160,10 +171,12 @@ p {
 /* =========================================
    Buttons
    ========================================= */
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     display: inline-block;
     padding: 0.9rem 2.2rem;
-    border-radius: 8px; /* 비즈니스는 둥글기보다 단정한 모서리 */
+    border-radius: 8px;
+    /* 비즈니스는 둥글기보다 단정한 모서리 */
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
@@ -218,13 +231,13 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 3rem 2.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .about-card h3 {
@@ -284,9 +297,10 @@ section {
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     aspect-ratio: 4 / 3;
-    background-color: #e2e8f0; /* 로딩 전 배경색 */
+    background-color: #e2e8f0;
+    /* 로딩 전 배경색 */
 }
 
 .gallery-item img {
@@ -297,21 +311,23 @@ section {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05); /* 과하지 않은 줌 효과 */
+    transform: scale(1.05);
+    /* 과하지 않은 줌 효과 */
 }
 
 /* =========================================
    Lightbox (사진 확대 보기)
    ========================================= */
 .lightbox {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.95); /* 세일즈맨 화이트 테마엔 밝은 박스 */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* 세일즈맨 화이트 테마엔 밝은 박스 */
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -327,7 +343,7 @@ section {
     max-width: 85%;
     max-height: 85vh;
     border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     transform: scale(0.95);
     transition: transform 0.3s ease;
     object-fit: contain;
@@ -342,10 +358,14 @@ section {
     top: 25px;
     right: 40px;
     color: var(--text-primary);
+    background: none;
+    border: none;
     font-size: 45px;
     font-weight: 300;
     cursor: pointer;
     z-index: 2001;
+    padding: 10px;
+    /* 터치 영역 확대 */
 }
 
 .close-lightbox:hover {
@@ -365,7 +385,7 @@ section {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .contact-box p {
@@ -410,6 +430,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -420,7 +441,9 @@ footer {
    Responsive Design (Mobile Support)
    ========================================= */
 @media (max-width: 768px) {
-    .hamburger { display: block; }
+    .hamburger {
+        display: block;
+    }
 
     .nav-links {
         position: fixed;
@@ -431,22 +454,77 @@ footer {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         padding: 1.5rem 0;
         border-bottom: 1px solid var(--border-color);
     }
 
-    .nav-links.active { left: 0; }
-    .nav-links li { margin: 1.2rem 0; }
-
-    section { padding: 5rem 5%; }
-    
-    .hero-content { margin-top: 3rem; }
-    .btn-group { flex-direction: column; width: 100%; }
-    .btn-primary, .btn-secondary { width: 100%; }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 1rem;
+    .nav-links.active {
+        left: 0;
     }
+
+    .nav-links li {
+        margin: 1.2rem 0;
+    }
+
+    section {
+        padding: 5rem 5%;
+    }
+
+    .hero-content {
+        margin-top: 3rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        /* 모바일 뷰에서 그리드 폭 140px -> 150px로 소폭 조정, gap 축소로 안정감 부여 */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+}
+
+/* =========================================
+   Gallery Caption Overlay & Lightbox Text
+   ========================================= */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+    padding: 1.5rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.lightbox {
+    flex-direction: column; /* 세로 정렬을 위해 추가 */
+}
+
+/* Lightbox Caption */
+.lightbox-caption {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 85%;
+    z-index: 2005;
 }
